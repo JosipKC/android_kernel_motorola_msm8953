@@ -1480,6 +1480,7 @@ static int fanout_add(struct sock *sk, u16 id, u16 type_flags)
 		list_add(&match->list, &fanout_list);
 	}
 	err = -EINVAL;
+
 	spin_lock(&po->bind_lock);
 	if (po->running &&
 	    match->type == type &&
